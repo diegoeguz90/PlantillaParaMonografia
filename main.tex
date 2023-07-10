@@ -1,0 +1,66 @@
+\documentclass[letterpaper]{book}
+ 
+ % https://www.unicauca.edu.co/doctoradoce/publicaciones/Guia_Monografia.pdf 
+ 
+\input{Packages.tex}
+
+% ********** Content **********
+\begin{document}
+	% \renewcommand{\bibname}{\normalsize Referencias} 
+	\renewcommand{\listfigurename}{Lista de figuras}
+	\renewcommand{\listtablename}{Lista de tablas}
+	\renewcommand{\contentsname}{Tabla de contenido}
+	\renewcommand{\figurename}{Figura}
+	\renewcommand{\tablename}{Tabla} 
+	\renewcommand{\baselinestretch}{1.3} % Tamano del interlineado a 1.3
+	\renewcommand{\sfdefault}{phv} % Para cambiar el tipo de letra por defecto 
+	% Comando para configurar el documento en Arial
+	\sffamily % Trabaja con arial en el cuerpo
+	\renewcommand{\familydefault}{phv} % Permite trabajar con letra Arial los titulos
+
+	% Aqui se puede incluir lo que vaya antes de la tabla de contenido
+	% Portada, contraportada, agradecimientos, etc.	
+	\newpage
+	\thispagestyle{empty}
+	\input{Cover.tex}
+	\newpage
+	\thispagestyle{empty}
+	\input{FrontPage.tex}
+	\newpage
+	\thispagestyle{empty}
+	\input{Acceptance.tex}
+	\newpage
+	\thispagestyle{empty}
+	\input{Acknowledgement.tex}
+	
+	\pagenumbering{Roman} 		% Para comenzar la numeracion de paginas en numeros romanos
+	\setcounter{page}{1}		% Inicia la numeración a partir de la siguiente pagina			
+	
+	% ctrl t - para comentar || ctrl u - para descomentar
+	
+	\newpage
+	\input{Abstract.tex}
+	
+	\thispagestyle{empty}		% deja esta pagina sin numeración		
+	\tableofcontents			% agrega la tabla de contenido
+	\thispagestyle{empty}		% deja esta pagina sin numeración		
+	\listoffigures 				% indice de figuras
+	\thispagestyle{empty}		% deja esta pagina sin numeración		
+	\listoftables 				% indice de tablas
+		
+	% Capitulos, secciones y subsecciones del documento	
+	
+	\newpage
+	\pagenumbering{arabic}		% tipo de numeración
+	\setcounter{page}{1}		% Inicia la numeración a partir de la siguiente pagina
+	
+	% texto numerado con numeros arabigos
+	\input{Chapters/Introduction.tex}	
+	\input{Chapters/Methods.tex}
+	\input{Chapters/Outcomes.tex}
+	\input{Chapters/Conclusions.tex}	
+	
+	% A partir de aqui van las referencias			
+	\bibliographystyle{IEEEtran}
+	\bibliography{Bibliografia}  
+\end{document}

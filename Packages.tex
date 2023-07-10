@@ -1,0 +1,64 @@
+\usepackage[utf8]				{inputenc}
+\usepackage[spanish]			{babel}
+\usepackage						{amsmath}
+\usepackage  					{mathtools}
+\usepackage						{amsfonts}
+\usepackage						{amssymb}
+\usepackage						{graphicx}
+\author							{Diego Enrique Guzmán Villamarin}
+%% Espaciado
+\usepackage						{setspace}
+%\onehalfspacing
+\setlength{\parindent}			{0pt}
+\setlength{\parskip}			{2.0ex plus0.5ex minus0.2ex}
+
+% Otros paquetes
+\usepackage  					{float}
+\usepackage   					{longtable}
+\usepackage   					{lscape}
+\usepackage[normalem]			{ulem}
+\useunder{\uline}{\ul}{}
+% Commands to include C and Matlab code
+\usepackage						{listings}
+\usepackage   			 		{color}
+\usepackage[table,xcdraw]		{xcolor}
+
+% Tabla vertical
+\usepackage						{rotating} 
+% hipervinculos
+\usepackage						{hyperref} 		
+% incluye todo en la tabla de contenido excepto el indice
+\usepackage[nottoc]				{tocbibind}		
+% subfiguras
+\usepackage						{subfig}
+\usepackage						{multirow}
+%\usepackage					{multicolumn}
+\usepackage						{bibentry}		
+\usepackage						{booktabs}
+\usepackage						{epstopdf}
+\usepackage[normalem]			{ulem}
+
+% para poner bibliografia
+%\nobibliography*
+
+% este paquete para la margen 
+\usepackage[top=3cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+%\evensidemargin 0.0in
+%\oddsidemargin 0.0in
+
+%\setlength{\parskip}{\baselineskip} 	% espacio entre parrafos
+
+% Corrección de palabras desconocidas al separar en silabas:
+%\babelhyphenation[english]{every-where}
+\hyphenation{de-sa-rro-llo dis-po-si-ti-vo mo-no-cro-ma-ti-co do-cu-men-ta-cion pro-ce-di-mien-to re-a-li-zar ha-bi-li-dad ca-rac-te-ri-zan re-gis-tra-da se-gui-mien-to}
+% corrección del tamaño de la letra
+\renewcommand{\normalsize}{\fontsize{11}{12}\selectfont}
+
+% ---------------------------------------------------------------------------------
+% Para configurar tablas {C=5cm}
+% ---------------------------------------------------------------------------------
+\usepackage				{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
